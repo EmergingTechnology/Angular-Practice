@@ -13,6 +13,8 @@ myapp.controller('CtrlOne', ['$scope', function($scope) {
         name: 'Div'
     }];
 
+    $scope.operation = $scope.bNames[0];
+
     /* $scope.add = function() {
          console.log('add');
          $scope.result = +$scope.num1 + +$scope.num2;

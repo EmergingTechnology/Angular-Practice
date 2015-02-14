@@ -15,9 +15,9 @@
 
     <div id="div1" ng-controller="CtrlOne">
         <form ng-submit="calculate()">
-            <input type="text" name="" ng-model="num1" value="" placeholder="">
+            <input type="text" name="" required ng-model="num1" value="" placeholder="">
             <br>
-            <input type="text" name="" ng-model="num2" value="" placeholder="">
+            <input type="text" name="" required ng-model="num2" value="" placeholder="">
             <br>
 
             <select ng-model="operation" ng-options="bName.name for bName in bNames"></select>
