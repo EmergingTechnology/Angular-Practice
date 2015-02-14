@@ -15,9 +15,9 @@
 
     <div id="div1" ng-controller="CtrlOne">
         <form ng-submit="calculate()">
-            First Name :
+            First Number :
             <input type="text" name="" required ng-model="calculation.num1" value="" placeholder="">
-            <br> Last Name :
+            <br> Last Number :
             <input type="text" name="" required ng-model="calculation.num2" value="" placeholder="">
             <br>
 
@@ -36,7 +36,7 @@
 
             <ul>
                 <li ng-repeat="res in calculations">
-                    {{res.num1}}, {{res.num2}}, {{res.operation.name | uppercase}}
+                    {{res.num1}}, {{res.num2}}, {{res.operation.name | capatalizeOperation}}
                 </li>
             </ul>
 

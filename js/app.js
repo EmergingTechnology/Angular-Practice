@@ -1,5 +1,16 @@
 var myapp = angular.module('sample', []);
 
+myapp.filter('capatalizeOperation', function() {
+    return function(input) {
+        //TO uppercase the first character
+        //return input.charAt(0).toUpperCase() + input.slice(1);
+
+        //TO uppercase the Last character
+        var subStr = input.substring(input.length - 1, input.length);
+        return input.slice(input.length - 1, input.length) + subStr.toUpperCase();
+    }
+});
+
 myapp.controller('CtrlOne', ['$scope', function($scope) {
     //  console.log('Hello');
 
