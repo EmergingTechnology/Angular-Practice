@@ -11,19 +11,29 @@
 </head>
 
 <body ng-app="sample">
+
+
     <div id="div1" ng-controller="CtrlOne">
-        <input type="text" name="" ng-model="num1" value="" placeholder="">
-        <br>
-        <input type="text" name="" ng-model="num2" value="" placeholder="">
-        <br>
-        <button type="" ng-click="add()">Add</button>
+        <form ng-submit="calculate()">
+            <input type="text" name="" ng-model="num1" value="" placeholder="">
+            <br>
+            <input type="text" name="" ng-model="num2" value="" placeholder="">
+            <br>
 
-        <button type="" ng-click="sub()">Sub</button>
+            <select ng-model="operation" ng-options="bName.name for bName in bNames"></select>
+            <button>Calculate</button>
 
-        <button type="" ng-click="div()">Div</button>
+            <!--  <button type="" ng-click="add()">Add</button>
 
-        <button type="" ng-click="mul()">Mul</button>
-        <input type="text" name="" ng-model="result" value="" placeholder="">
+            <button type="" ng-click="sub()">Sub</button>
+            <button type="" ng-click="div()">Div</button>
+
+            <button type="" ng-click="mul()">Mul</button> -->
+            <br>
+            <br>
+            <input type="text" name="" ng-model="result" value="" placeholder="">
+
+        </form>
     </div>
 
     <!-- Linking app.js -->
