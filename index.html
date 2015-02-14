@@ -15,12 +15,13 @@
 
     <div id="div1" ng-controller="CtrlOne">
         <form ng-submit="calculate()">
-            <input type="text" name="" required ng-model="num1" value="" placeholder="">
-            <br>
-            <input type="text" name="" required ng-model="num2" value="" placeholder="">
+            First Name :
+            <input type="text" name="" required ng-model="calculation.num1" value="" placeholder="">
+            <br> Last Name :
+            <input type="text" name="" required ng-model="calculation.num2" value="" placeholder="">
             <br>
 
-            <select ng-model="operation" ng-options="bName.name for bName in bNames"></select>
+            <select ng-model="calculation.operation" ng-options="bName.name for bName in bNames"></select>
             <button>Calculate</button>
 
             <!--  <button type="" ng-click="add()">Add</button>
@@ -32,6 +33,12 @@
             <br>
             <br>
             <input type="text" name="" ng-model="result" value="" placeholder="">
+
+            <ul>
+                <li ng-repeat="res in calculations">
+                    {{res.num1}}, {{res.num2}}, {{res.operation.name}}
+                </li>
+            </ul>
 
         </form>
     </div>
